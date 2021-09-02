@@ -25,7 +25,7 @@ class Customer(TicketMixin):
         self.age = age
         
     def describe(self):
-        print (f"{self.name} age {self.age} ticket price is {Customer(TicketMixin).calculate_ticket_price()}")
+        return (f"{self.name} age {self.age} ticket price is {self.calculate_ticket_price(self.age)}")
 
 customer = Customer("Ryan Phillips", 22)
 print(customer.describe())
